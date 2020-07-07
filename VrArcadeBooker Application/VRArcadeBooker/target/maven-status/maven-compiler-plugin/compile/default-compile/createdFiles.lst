@@ -1,0 +1,10 @@
+com\mycompany\vrarcadebooker\util\UtilityRest.class
+com\mycompany\vrarcadebooker\controllers\VRArcadeController.class
+com\mycompany\vrarcadebooker\repositories\VRArcadeBookerRepository.class
+com\mycompany\vrarcadebooker\rest\VRArcadeBookerService.class
+com\mycompany\vrarcadebooker\entity\VrBooker_.class
+com\mycompany\vrarcadebooker\JerseyConfig.class
+com\mycompany\vrarcadebooker\controllers\BaseController.class
+com\mycompany\vrarcadebooker\entity\VrBooker.class
+com\mycompany\vrarcadebooker\util\CisUtility.class
+com\mycompany\vrarcadebooker\VRArcadeBookerApplication.class

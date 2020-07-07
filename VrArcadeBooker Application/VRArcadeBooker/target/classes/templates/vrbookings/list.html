@@ -1,0 +1,49 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="fragments/head :: headerFragment">
+        <title></title>
+    </head>
+    <body>
+        <nav th:replace="fragments/navHeader :: navbar"></nav>
+
+        <div class="container">
+            <h2 class="title is-2 has-text-centered">VR Booking List</h2>
+            <h2 class="title is-2 has-text-centered"><span th:text="${findNameMessage}"></span></h2>
+            <div class="table-container">
+
+                <a th:href="@{/vrbookings/add}"class="button"> Add Booking</a>
+                <table class="table centered is-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 150px;">id</th>
+                            <th style="width: 150px;">Booker</th>
+                            <th style="width: 150px;">Player 2</th>
+                            <th style="width: 150px;">Player 3</th>
+                            <th style="width: 150px;">Player 4</th>
+                            <th style="width: 150px;">Date (yyyy-MM-dd)</th>
+                            <th style="width: 150px;">Time (xx:xx)</th>
+                            <th style="width: 150px;">Length (Minutes) </th>
+                            <th> Actions </th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        <tr th:each="vrbooker : ${vrbookers}">
+                            <td th:text="${vrbooker.id}"></td>
+                            <td th:text="${vrbooker.name1}"></td>
+                            <td th:text="${vrbooker.name2}"></td>
+                            <td th:text="${vrbooker.name3}"></td>
+                            <td th:text="${vrbooker.name4}"></td>
+                            <td th:text="${vrbooker.dateOfBooking}"></td>
+                            <td th:text="${vrbooker.timeOfBooking}"></td>
+                            <td th:text="${vrbooker.lengthOfBooking}"></td>
+
+                          <td><a th:href="@{/vrbookings/edit(id=${vrbooker.id})}">Edit</a>&nbsp;<a
+                                    th:href="@{/vrbookings/delete(id=${vrbooker.id})}">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer th:replace="fragments/footer :: footer"></footer>
+    </body>
+</html>

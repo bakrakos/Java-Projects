@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <body>          
+        <nav th:fragment="navbar" class="navbar nav" role="navigation" aria-label="main navigation">
+
+            <div class="navbar-brand">
+                <a th:href="@{/}" class="vert-align">
+                    <img th:src="@{/images/VR-Icon-Display.png}" class="logo"></span>
+                </a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" id="burg"
+                   onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"
+                   data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a th:href="@{/vrbookings/list}" class="navbar-item">View Bookings</a>
+                        <div class="navbar-dropdown">                            
+                            <a th:href="@{/vrbookings/add}" class="navbar-item">Add Booking</a>
+                            <hr class="navbar-divider">
+                                <a th:href="@{/vrbookings/find}" class="navbar-item">Find Booking</a>
+                                <hr class="navbar-divider">
+                                    <a th:href="@{/vrbookings/list}" class="navbar-item">Edit/Delete</a>
+                                    <hr class="navbar-divider">
+                                        <a th:href="@{/vrbookings/export}" class="navbar-item">Export to Txt File</a>
+                                        </div>
+
+                                        </div>
+                                        <a th:href="@{/about}" class="navbar-item">About</a>
+                                        </div>
+                                        </nav>
+                                        </body>
+                                        </html>

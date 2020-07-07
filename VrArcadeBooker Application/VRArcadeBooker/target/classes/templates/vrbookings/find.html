@@ -1,0 +1,29 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="fragments/head :: headerFragment">
+        <title></title>
+    </head>
+    <body>
+        <nav th:replace="fragments/navHeader :: navbar"></nav>
+        <div class="container">
+            <form th:object="${vrbooker}" action="/vrbookings/findSubmit" th:action="@{/vrbookings/findSubmit}" method="post" class="form-horizontal">
+                <fieldset>
+                    <p th:text="${message}">message here</p>
+
+                    <div class="title is-2 has-text-centered">
+
+                        <label class="label" for="date">Select Date of Booking:</label>                    
+                        <select name="dateOfBooking">
+                            <option th:each="date : ${dates}" th:value="${date}" th:text="${date}"></option>
+                        </select>
+                    </div>
+                    <div style="text-align: left;" class="form-actions">
+                        <button class="button" type="submit">Find</button>
+
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <footer th:replace="fragments/footer :: footer"></footer>
+    </body>
+</html>

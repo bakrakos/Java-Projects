@@ -1,0 +1,91 @@
+:root {
+    
+    --main-color: coral;
+}
+
+
+
+.logo{
+    height: 80px;
+
+
+}
+.no-link {
+    color: inherit;
+}
+
+.no-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.table-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*.form-container{
+    margin: 0 auto;
+    max-width: 600px;
+}*/
+
+.table-container {
+    margin: 0 auto;
+
+}
+
+.field-id {
+    width: 20px;
+    display: none;
+}
+
+.flex-sp-btw {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links > a {
+    margin-right: 24px;
+}
+
+.nav {
+    margin-bottom: 50px;
+    background: var(--main-color);
+}
+
+.ftr {
+    margin-top: 50px;
+    padding: 20px;
+    background: var(--main-color);
+}
+.vert-align {
+    display: flex;
+    align-items:center;
+    border: 3px solid black;
+
+
+}
+.centered{
+    margin: 0 auto;
+}
+
+.button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.container {
+   text-align: center; 
+}
+
+.table{
+   margin-right: auto;
+   margin-left: auto;
+}

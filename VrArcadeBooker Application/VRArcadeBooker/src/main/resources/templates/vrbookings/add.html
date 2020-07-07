@@ -1,0 +1,82 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+   <head th:include="fragments/head :: headerFragment">
+        <title></title>
+    </head>
+    <body>
+    <nav th:replace="fragments/navHeader :: navbar"></nav>
+    <div class="container">
+        <h1 class="title is-2 has-text-centered">Add an Entry</h1>
+            <form th:object="${vrbooker}" action="/vrbookings/addSubmit" th:action="@{/vrbookings/addSubmit}" method="post" class="form-horizontal">
+                <fieldset>
+                    <table class="table table-striped">
+                        <tr>
+                            <td><input type= "hidden" th:field="${vrbooker.id}"</td>
+                        </tr>
+                        <tr>
+                            <th>Booker</th>
+                            <td><input type="text" th:field="${vrbooker.name1}"/>
+                                 <ul th:if="${#fields.hasErrors('name1')}">
+                                        <li class="error" th:each="err : ${#fields.errors('name1')}" th:text="${err}">Booker is invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Player 2</th>
+                            <td><input type="text" th:field="${vrbooker.name2}"/>
+                                 <ul th:if="${#fields.hasErrors('name2')}">
+                                        <li class="error" th:each="err : ${#fields.errors('name2')}" th:text="${err}">Name is invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Player 3</th>
+                            <td><input type="text" th:field="${vrbooker.name3}"/>
+                                 <ul th:if="${#fields.hasErrors('name3')}">
+                                        <li class="error" th:each="err : ${#fields.errors('name3')}" th:text="${err}">Name is invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Player 4</th>
+                            <td><input type="text" th:field="${vrbooker.name4}"/>
+                                 <ul th:if="${#fields.hasErrors('name4')}">
+                                        <li class="error" th:each="err : ${#fields.errors('name4')}" th:text="${err}">Name is invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Date (yyyy-MM-dd)</th>
+                            <td><input type="text" th:field="${vrbooker.dateOfBooking}"/>
+                                 <ul th:if="${#fields.hasErrors('dateOfBooking')}">
+                                        <li class="error" th:each="err : ${#fields.errors('dateOfBooking')}" th:text="${err}">Date is invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Time (xx:xx)</th>
+                            <td><input type="text" th:field="${vrbooker.timeOfBooking}"/>
+                                 <ul th:if="${#fields.hasErrors('timeOfBooking')}">
+                                        <li class="error" th:each="err : ${#fields.errors('timeOfBooking')}" th:text="${err}">Time is invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Length (In Minutes)</th>
+                            <td><input type="text" th:field="${vrbooker.lengthOfBooking}"/>
+                                 <ul th:if="${#fields.hasErrors('lengthOfBooking')}">
+                                        <li class="error" th:each="err : ${#fields.errors('lengthOfBooking')}" th:text="${err}">Length is invalid</li>
+                                 </ul><br/>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <div style="text-align: left;" class="form-actions">
+                        <button class="button" type="submit">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    
+      <footer th:replace="fragments/footer :: footer"></footer>
+    </body>
+</html>
