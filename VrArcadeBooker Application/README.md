@@ -12,7 +12,7 @@ VR Arcade Booker Application
 
 Omar Bakraky - Lead Developer 
 
-"Removed Name for Privacy" - Business Representative 
+Fowler_Kendall - Business Representative 
 
 CIS2232 20192020 Intercession
 
