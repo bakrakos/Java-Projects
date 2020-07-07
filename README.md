@@ -1,6 +1,6 @@
-# Java-Projects
+
 Java Projects
 
-##This Repository is used to show Java projects##
+#This Repository is used to show Java projects#
 
-##Developer Omar Bakraky##
+#Developer Omar Bakraky#
