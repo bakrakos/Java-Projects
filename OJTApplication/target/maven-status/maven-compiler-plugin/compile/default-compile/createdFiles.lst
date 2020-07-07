@@ -1,0 +1,5 @@
+com\mycompany\ojtreflection\util\CisUtility.class
+com\mycompany\ojtreflection\bo\OjtReflectionBO.class
+com\mycompany\ojtreflection\dao\OjtReflectionDAO.class
+com\mycompany\ojtreflection\Controller.class
+com\mycompany\ojtreflection\entity\OjtReflection.class
